@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Flight Space Sim - Three.js (Mouse Aim)</title>
+    <!-- Link đến file CSS để định dạng giao diện -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Heads-Up Display (HUD) chứa điểm số và các thông tin khác (nếu có) -->
+    <div id="hud">
+        <div id="scoreDisplay">Điểm: 0</div>
+        <!-- Có thể thêm hiển thị tốc độ, máu... ở đây sau -->
+    </div>
+
+    <!-- Thông báo Game Over, ban đầu ẩn -->
+    <div id="gameOver" style="display: none;">
+        GAME OVER!<br>
+        Nhấn F5 để chơi lại
+    </div>
+
+    <!-- Hướng dẫn điều khiển mới -->
+    <div id="instructions">
+        Di chuyển chuột: Định hướng tàu<br>
+        Click chuột trái: Bắn<br>
+        W/S: Tăng tốc/Phanh/Lùi<br>
+        A/D: Lắc ngang (Roll)<br>
+    </div>
+
+    <!-- Nơi Three.js sẽ vẽ game vào (canvas sẽ được tự động thêm vào đây bởi script.js) -->
+
+    <!-- Import thư viện Three.js từ CDN sử dụng importmap -->
+    <!-- Giúp sử dụng cú pháp 'import * as THREE from 'three';' trong script.js -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+            }
+        }
+    </script>
+
+    <!-- Link đến file JavaScript chính của game -->
+    <!-- type="module" là bắt buộc khi sử dụng import trong JS -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
